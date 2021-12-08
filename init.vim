@@ -25,7 +25,7 @@ set laststatus=2
 set scrolloff=10
 set expandtab
 "let loaded_matchparen = 1
-set shell=fish
+set shell=zsh
 set backupskip=/tmp/*,/private/tmp/*
 
 " incremental substitution (neovim)
@@ -97,6 +97,8 @@ endif
 " ---------------------------------------------------------------------
 au BufNewFile,BufRead *.js setf javascript
 " JavaScript
+au BufNewFile,BufRead *.jsx setf javascriptreact
+" JavaScript
 au BufNewFile,BufRead *.es6 setf javascript
 " TypeScript
 au BufNewFile,BufRead *.tsx setf typescriptreact
@@ -139,15 +141,31 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
   " Use NeoSolarized
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized
+ " let g:neosolarized_termtrans=1
+ " runtime ./colors/NeoSolarized.vim
+  let g:nord_contrast = v:true
+  let g:nord_borders = v:false
+  let g:nord_disable_background = v:false
+  let g:nord_italic = v:false
+
+" Load the colorscheme
+  colorscheme nord
+  " colorscheme NeoSolarized
 endif
 
 "}}}
 
 " Extras "{{{
 " ---------------------------------------------------------------------
+
+ "lua << EOF
+" require'lspinstall'.setup()
+" local servers = require'lspinstall'.installed_servers()
+" for _, server in pairs(servers) do
+"   require'lspconfig'[server].setup{}
+" end
+" EOF
+
 set exrc
 "}}}
 

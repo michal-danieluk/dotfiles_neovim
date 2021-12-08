@@ -9,9 +9,12 @@ Plug 'tpope/vim-rhubarb'
 Plug 'cohama/lexima.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
+Plug 'williamboman/nvim-lsp-installer'
+
 
 if has("nvim")
-  Plug 'hoob3rt/lualine.nvim'
+  Plug 'shaunsingh/nord.nvim'
+  Plug 'nvim-lualine/lualine.nvim'
   Plug 'kristijanhusak/defx-git'
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
