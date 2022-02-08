@@ -26,7 +26,7 @@ set scrolloff=10
 set expandtab
 "let loaded_matchparen = 1
 set shell=zsh
-set backupskip=/tmp/*,/private/tmp/*
+" set backupskip=/tmp/*,/private/tmp/*
 
 " incremental substitution (neovim)
 if has('nvim')
@@ -158,15 +158,16 @@ endif
 " Extras "{{{
 " ---------------------------------------------------------------------
 
- "lua << EOF
-" require'lspinstall'.setup()
+"lua << EOF
+"require'lspinstall'.setup()
 " local servers = require'lspinstall'.installed_servers()
 " for _, server in pairs(servers) do
 "   require'lspconfig'[server].setup{}
 " end
-" EOF
+"EOF
 
 set exrc
+
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:
